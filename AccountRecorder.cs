@@ -33,7 +33,7 @@ namespace AccountRecorder
 
         static void funcPrintParameterSyntax()
         {
-            Console.WriteLine("AccountRecorder v1.0 (c) 2011 SystemsAdminPro.com");
+            Console.WriteLine("AccountRecorder v1.0");
             Console.WriteLine();
             Console.WriteLine("Description: generate list of user accounts in the domain and account group membership");
             Console.WriteLine();
