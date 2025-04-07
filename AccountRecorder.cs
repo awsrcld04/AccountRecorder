@@ -185,31 +185,6 @@ namespace AccountRecorder
 
         }
 
-        static void funcProgramRegistryTag()
-        {
-            try
-            {
-                string strRegistryProfilesPath = "SOFTWARE";
-                RegistryKey objRootKey = Microsoft.Win32.Registry.LocalMachine;
-                RegistryKey objSoftwareKey = objRootKey.OpenSubKey(strRegistryProfilesPath, true);
-                RegistryKey objSystemsAdminProKey = objSoftwareKey.OpenSubKey("SystemsAdminPro", true);
-                if (objSystemsAdminProKey == null)
-                {
-                    objSystemsAdminProKey = objSoftwareKey.CreateSubKey("SystemsAdminPro");
-                }
-                if (objSystemsAdminProKey != null)
-                {
-                    if (objSystemsAdminProKey.GetValue("AccountRecorder") == null)
-                        objSystemsAdminProKey.SetValue("AccountRecorder", "1", RegistryValueKind.String);
-                }
-            }
-            catch (Exception ex)
-            {
-                MethodBase mb1 = MethodBase.GetCurrentMethod();
-                funcGetFuncCatchCode(mb1.Name, ex);
-            }
-        }
-
         static void funcToEventLog(string strAppName, string strEventMsg, int intEventType)
         {
             try
