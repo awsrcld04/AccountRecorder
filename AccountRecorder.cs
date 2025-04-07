@@ -96,8 +96,6 @@ namespace AccountRecorder
         {
             funcToEventLog("AccountRecorder", "AccountRecorder started", 100);
 
-            funcProgramRegistryTag();
-
             DateTime dtNow = DateTime.Now;
 
             string dtFormat = "MMdyyyyHHmmss"; // for log file creation
